@@ -2,14 +2,18 @@ import React from 'react';
 
 
 class SubmitButton extends React.Component {
-  render(){
+  render(){  
+    return (
+      <div className="submitButton">
+        <button
+          className='btn'
+          disabled={ () => this.props.onClick() }
+        >
+          {this.props.text}
 
-  
-  return (
-    <div className="submitButton">
-     Yupi
-    </div>
-  );
+        </button>
+      </div>
+    );
 }
 }
 
