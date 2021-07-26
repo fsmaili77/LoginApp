@@ -43,7 +43,7 @@ class App extends React.Component {
         method: 'post',
         headers: {
           'Accept': 'application/json',
-          'Content-type': 'application/json'
+          'Content-Type': 'application/json'
         }
       });
       let result = await res.json();

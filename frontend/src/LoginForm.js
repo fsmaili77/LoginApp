@@ -49,7 +49,7 @@ class LoginForm extends React.Component {
         method: 'post',
         headers: {
           'Accept': 'application/json',
-          'Content-type': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           username: this.state.username,
@@ -61,6 +61,7 @@ class LoginForm extends React.Component {
       if (result && result.success) {
         UserStore.isLoggedIn = true;
         UserStore.username = result.username;
+        
       }
       else if (result && result.success === false) {
         this.resetForm();
